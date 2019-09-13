@@ -219,40 +219,6 @@ filter.gbifraw = function (gbif.downloaded.data,
     
 } # end function
 
-
-
-
-# ## EXTRAS ----------------------------------------------------------------------
-# 
-# ## DATA CHECKS
-#   ## List remaining data issues
-#   issues <- c(gbif_issues()[,2], "NO_RECORDED_ISSUE")
-#   issues.table <- data.frame(issue = issues, N = (rep(NA, length(issues)))) 
-#   for (i in 1:dim(issues.table)[1]){
-#     if (i == dim(issues.table)[1]) {
-#       issues.table[i,2] <- as.numeric(dim(dat[issue==""])[1])
-#     } else {
-#       issues.table[i,2] <- as.numeric(sum(grepl(issues[i], dat$issue, perl = TRUE))) # grepl to find string (arg1) in object (arg2)
-#     }
-#   }
-#   
-#   issues.table[issues.table$N != 0,]
-# 
-# ## Using scrubr package
-#   library(scrubr)
-#   temp <- dat[, .(species, decimallatitude, decimallongitude, eventdate, gbifid)]
-#   names(temp) <- c("name" ,"latitude", "longitude", "date", "key")
-#   dframe(temp) %>% coord_unlikely(drop = FALSE) %>% NROW
-#     ## not useful...
-#      
-# ## Check to see that NAs are retained with the !which() statement: x must be = y - z (y will always be > z becayse y includes NAs)
-#    x <- sum(is.na(dat$coordinateuncertaintyinmeters))
-#    y <- dim(dat[!which(dat$coordinateuncertaintyinmeters > spatial.uncertainty.m)])[1]
-#    z <- dim(dat[which(dat$coordinateuncertaintyinmeters <= spatial.uncertainty.m)])[1]
-#
-#   ## ---- ----------------------------------------------------------------------
-#   
-
  
   
   
